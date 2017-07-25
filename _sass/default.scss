@@ -1,0 +1,62 @@
+$PRIMARY_COLOR : #021E29;
+
+body{
+  background-color: $PRIMARY_COLOR;
+}
+
+.pageContent{
+  background-color: white;
+  opacity: 0.7;
+  margin-left: 10%;
+  margin-right: 10%;
+  padding: 10px 20px;
+
+  label{
+    font-weight: bold
+  }
+
+  hr{
+    margin-top: 0px;
+    border-top-width: 2px;
+    border-top-color: $PRIMARY_COLOR;
+  }
+
+  .ResumeHead{
+    text-align: center;
+    p{
+      margin: 2px auto;
+    }
+
+    .fullname{
+      font-size:1.5em;
+      margin: 0px;
+      padding-top: 10px;
+    }
+  }
+
+  .content-group{
+    padding-bottom:10px;
+    span{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    .skills{
+      .item-category{
+        font-weight: bold;
+      }
+      .item-data{
+        margin-left:20%;
+      }
+    }
+
+    .experience{
+      .product-content{
+        margin-left: 5%;
+        ul{
+          margin-top: 0px;
+        }
+      }
+    }
+  }
+}

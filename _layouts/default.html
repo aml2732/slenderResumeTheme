@@ -1,0 +1,79 @@
+<html>
+<head>
+  <link rel="stylesheet" href="/assets/main.css">
+</head>
+<body>
+  <div class="navigation">
+    TODO: Add navigation
+  </div>
+  <div class="pageContent">
+    <div class="ResumeHead">
+      <p class="fullname">{{page.fullname}}</p>
+      <p>{{page.email}}</p>
+      <p>{{page.phonenumber}}</p>
+    </div>
+
+    <div class="content-group">
+      <label>Education</label>
+      <hr/>
+      <span>
+        <span><strong>{{page.college}}</strong> &#160; {{page.citystate}}</span>
+        <span>{{page.graduationdate}}</span>
+      </span>
+      <span>
+        <span>{{page.degreetype}}</span>
+        <span>{{page.gpa}}</span>
+      </span>
+    </div>
+
+    <div class="content-group">
+      <label>Technical Skills</label>
+      <hr/>
+      <div class="skills">
+        {% for item in page.skills %}
+          <span class="item-category">{{item.name}}:</span>
+          <span class="item-data">{{item.data}}</span>
+          <br/>
+        {% endfor %}
+      </div>
+    </div>
+
+    <div class="content-group">
+      <label>Experience</label>
+      <hr/>
+      {% for job in page.experience %}
+      <div class="experience">
+        <strong>{{job.company}}</strong>
+        <span>{{job.position}} &#160; {{job.date}}</span>
+        {% for product in job.work %}
+        <div class="product-content">
+          <span>{{product.product}}</span>
+          <ul>
+            {% for task in product.tasks %}
+              <li>{{task}}</li>
+            {% endfor %}
+          </ul>
+        </div>
+        {% endfor %}
+      </div>
+      {% endfor %}
+    </div>
+
+    {% for item in page.other %}
+      <div class="content-group">
+        <label>{{item.category}}</label>
+        <hr/>
+        <ul>
+          {% for line in item.lines %}
+            <li>{{line}}</li>
+          {% endfor %}
+        </ul>
+      </div>
+    {% endfor %}
+
+
+  </div>
+</body>
+</html>
+
+{{ content }}
