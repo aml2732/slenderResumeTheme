@@ -1,4 +1,26 @@
 
+##  Usage instructions
+ * `gem install bundler`  
+ * `jekyll new resume`  
+ * `cd resume`  
+ * replace the line `gem 'minima',`.. with `gem 'slenderresumetheme', '~> 0.0.2'`  
+ * `bundle install` to install ^ dependency  
+   * if ubuntu user may need to supply passwork or use sudo.  
+ * from `_config.yml` remove the following  
+ ```  
+ theme: minima  
+ plugins:  
+  - jekyll-feed  
+ ```  
+ and replace it with `theme: slenderresumetheme`  
+ * remove some of the default generated files using the script: `rm -rf _posts && rm about.md 404.html`  
+ * Open index.md and edit: `layout: home` to `layout: default`  
+ * replace the contents of index.md with your modified version of the sample below.  
+ * `jekyll serve`  
+ * access the site on : `http://localhost:4000`  
+
+
+
 ## Sample index.md:
 ```
 ---
@@ -58,23 +80,4 @@ other:
 ---
 ```
 
-Run `jekyll serve`
-
-##  Usage instructions
- * `gem install bundler`
- * `jekyll new resume`
- * `cd resume`
- * replace the line `gem 'minima',`.. with `gem 'slenderresumetheme', '~> 0.0.1'`
- * `bundle install` to install ^ dependency
-   * if ubuntu user may need to supply passwork or use sudo.
- * from `_config.yml` remove the following
- ```
- theme: minima
- plugins:
-  - jekyll-feed
- ```
- and replace it with `theme: slenderresumetheme`
- * remove some of the default generated files using the script: `rm -rf _posts && rm about.md 404.html`
- * Open index.md and edit: `layout: home` to `layout: default`
- * `jekyll serve`
- * access the site on : `http://localhost:4000`
+![alt text](https://raw.githubusercontent.com/aml2732/slenderResumeTheme/master/_docs/v0_0_2.png)
