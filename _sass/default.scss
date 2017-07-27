@@ -1,14 +1,15 @@
 $PRIMARY_COLOR : #021E29;
+$SECONDARY_COLOR: #A3ADB1;
 
 body{
+  background-image: linear-gradient(to bottom right, $PRIMARY_COLOR, $SECONDARY_COLOR);
   background-color: $PRIMARY_COLOR;
 }
 
 .pageContent{
   background-color: white;
   opacity: 0.7;
-  margin-left: 10%;
-  margin-right: 10%;
+  margin: 20px 10%;
   padding: 10px 20px;
 
   label{

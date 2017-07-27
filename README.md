@@ -79,5 +79,8 @@ other:
   "Text Text Text Text Text Text Text Text"]
 ---
 ```
+## Packaging this gem
+  * `gem build slender-resume-theme.gemspec`
+  * `gem push <generatedGem>.gem`
 
 ![alt text](https://raw.githubusercontent.com/aml2732/slenderResumeTheme/master/_docs/v0_0_2.png)
